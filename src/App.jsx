@@ -39,7 +39,7 @@ export default function App() {
         <span className="disclaimer-banner__icon">⚠️</span>
         <p>
           <strong>Disclaimer:</strong> This project is strictly for educational and testing purposes only. 
-          The author does not endorse cheating or academic dishonesty. 
+          I do not endorse cheating or academic dishonesty. 
           Do NOT use this tool for any illegal or unethical activities.
         </p>
       </div>

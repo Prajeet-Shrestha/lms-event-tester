@@ -57,9 +57,9 @@ Each edge case card shows:
 
 ## ⚠️ Disclaimer
 
-This project is created **strictly for educational and testing purposes only**. The author does not endorse cheating, academic dishonesty, or any form of misconduct. This tool is meant to help educators, developers, and QA testers understand how browser events behave in proctored environments.
+This project is **strictly for educational and testing purposes only**. I do not endorse cheating, academic dishonesty, or any form of misconduct. I built this to help educators, developers, and QA testers understand how browser events behave in proctored environments.
 
-**You should NOT use this project for any illegal or unethical activities.** Misuse of this tool to circumvent exam proctoring systems violates academic integrity policies and may result in serious consequences.
+**You should NOT use this project for any illegal or unethical activities.** Misusing this tool to circumvent exam proctoring violates academic integrity policies and may have serious consequences.
 
 ## License
 
