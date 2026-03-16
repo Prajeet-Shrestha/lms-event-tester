@@ -28,7 +28,7 @@ export default function App() {
           <div>
             <div className="app-header__title">Canvas LMS Event Tester</div>
             <div className="app-header__subtitle">
-              Browser event edge-case testing for Instructure Canvas quiz proctoring
+              Testing what Canvas actually sees when you switch tabs, open Spotlight, or drag to another monitor
             </div>
           </div>
         </div>
@@ -38,9 +38,9 @@ export default function App() {
       <div className="disclaimer-banner">
         <span className="disclaimer-banner__icon">⚠️</span>
         <p>
-          <strong>Disclaimer:</strong> This project is strictly for educational and testing purposes only. 
-          I do not endorse cheating or academic dishonesty. 
-          Do NOT use this tool for any illegal or unethical activities.
+          <strong>Heads up:</strong> I built this for educational and testing purposes only. 
+          I don't endorse cheating or academic dishonesty. 
+          Don't use this for anything shady.
         </p>
       </div>
 

@@ -548,8 +548,8 @@ export default function EdgeCasePanel() {
       <div className="edge-panel__header">
         <h2 className="edge-panel__title">Canvas LMS Edge Cases</h2>
         <p className="edge-panel__desc">
-          40 browser & OS scenarios that affect Canvas quiz proctoring detection.
-          Trigger each one and observe the event stream →
+          40 things that happen on your computer or browser that Canvas may (or may not) catch during a quiz.
+          Try them out and watch the event stream.
         </p>
       </div>
 
