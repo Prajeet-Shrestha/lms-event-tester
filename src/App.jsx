@@ -35,6 +35,39 @@ export default function App() {
         <StatusIndicator />
       </header>
 
+      <div className="disclaimer-banner">
+        <span className="disclaimer-banner__icon">⚠️</span>
+        <p>
+          <strong>Disclaimer:</strong> This project is strictly for educational and testing purposes only. 
+          The author does not endorse cheating or academic dishonesty. 
+          Do NOT use this tool for any illegal or unethical activities.
+        </p>
+      </div>
+
+      <style>{`
+        .disclaimer-banner {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          padding: 12px 16px;
+          margin: 0 var(--space-lg);
+          background: rgba(234, 179, 8, 0.06);
+          border: 1px solid rgba(234, 179, 8, 0.15);
+          border-radius: var(--radius-lg);
+          font-size: 0.78rem;
+          color: var(--text-secondary);
+          line-height: 1.5;
+        }
+        .disclaimer-banner__icon {
+          font-size: 1rem;
+          flex-shrink: 0;
+          margin-top: 1px;
+        }
+        .disclaimer-banner strong {
+          color: #eab308;
+        }
+      `}</style>
+
       <main className="app-main">
         <div className="app-left">
           <StatsBar stats={stats} />
