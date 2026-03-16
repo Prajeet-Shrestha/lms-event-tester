@@ -79,6 +79,52 @@ export default function App() {
       </main>
 
       <ToastContainer toasts={toasts} onDismiss={dismissToast} />
+
+      <div className="mobile-blocker">
+        <div className="mobile-blocker__content">
+          <NotePencil size={48} weight="duotone" />
+          <h2>Desktop only</h2>
+          <p>
+            This tool tests browser events that only make sense on a desktop.
+            Open it on a laptop or computer to use it.
+          </p>
+        </div>
+      </div>
+
+      <style>{`
+        .mobile-blocker {
+          display: none;
+          position: fixed;
+          inset: 0;
+          z-index: 99999;
+          background: var(--bg-primary, #0a0e17);
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 2rem;
+        }
+        .mobile-blocker__content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+          color: var(--text-secondary, #94a3b8);
+        }
+        .mobile-blocker__content h2 {
+          font-size: 1.4rem;
+          color: var(--text-primary, #f1f5f9);
+          margin: 0;
+        }
+        .mobile-blocker__content p {
+          font-size: 0.9rem;
+          line-height: 1.6;
+          max-width: 300px;
+        }
+        @media (max-width: 768px) {
+          .mobile-blocker { display: flex; }
+          .app-header, .disclaimer-banner, .app-main, .toast-container { display: none !important; }
+        }
+      `}</style>
     </div>
   );
 }
