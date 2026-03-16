@@ -64,8 +64,16 @@ export function useEventLogger() {
 
     bufferRef.current.push(entry);
 
-    // Batch updates via rAF
-    if (!rafRef.current) {
+    // blur/visibilitychange/focus: rAF won't fire when the tab is inactive,
+    // so flush these synchronously via setTimeout instead
+    const criticalEvents = ['blur', 'focus', 'visibilitychange', 'beforeunload', 'pagehide'];
+    if (criticalEvents.includes(event.type)) {
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+        rafRef.current = null;
+      }
+      setTimeout(flush, 0);
+    } else if (!rafRef.current) {
       rafRef.current = requestAnimationFrame(() => {
         flush();
         rafRef.current = null;

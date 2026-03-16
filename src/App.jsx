@@ -78,6 +78,46 @@ export default function App() {
         </div>
       </main>
 
+      <footer className="app-footer">
+        <span>
+          Built by <a href="https://prajeet.com" target="_blank" rel="noopener noreferrer">Prajeet</a>
+        </span>
+        <span className="app-footer__sep">·</span>
+        <a href="https://buymemomo.com/davinci" target="_blank" rel="noopener noreferrer" className="app-footer__momo">
+          🥟 Buy me a momo
+        </a>
+      </footer>
+
+      <style>{`
+        .app-footer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          padding: 20px;
+          font-size: 0.8rem;
+          color: var(--text-muted, #475569);
+          border-top: 1px solid var(--border-subtle, rgba(255,255,255,0.06));
+        }
+        .app-footer a {
+          color: var(--text-secondary, #94a3b8);
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+        .app-footer a:hover {
+          color: var(--text-primary, #f1f5f9);
+        }
+        .app-footer__sep {
+          color: var(--border-subtle, rgba(255,255,255,0.15));
+        }
+        .app-footer__momo {
+          color: var(--text-secondary, #94a3b8) !important;
+        }
+        .app-footer__momo:hover {
+          color: #fbbf24 !important;
+        }
+      `}</style>
+
       <ToastContainer toasts={toasts} onDismiss={dismissToast} />
 
       <div className="mobile-blocker">
