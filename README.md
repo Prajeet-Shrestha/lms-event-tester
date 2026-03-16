@@ -2,7 +2,7 @@
 
 If you've ever taken a quiz on Canvas and wondered what it actually detects when you switch tabs, open Spotlight, or drag your browser to another monitor -- this tool answers that question.
 
-It tests **40 different scenarios** that can trigger (or fail to trigger) Canvas quiz proctoring. Each card shows what browser events fire, what Canvas does with them, and whether the behavior is even detectable at all.
+It tests **41 different scenarios** that can trigger (or fail to trigger) Canvas quiz proctoring. Each card shows what browser events fire, what Canvas does with them, and whether the behavior is even detectable at all.
 
 Built with React + Vite. Uses [Phosphor icons](https://phosphoricons.com/).
 
@@ -21,7 +21,7 @@ The tester covers 10 categories:
 | Timing | 2 | Sleep/wake, system clock changes |
 | Mobile | 1 | App switching |
 | Cheating | 8 | DevTools, right-click, copy/paste, screenshot, PiP, tab duplication, drag and drop |
-| Undetectable | 4 | Screen recording, remote desktop, VMs, text-to-speech |
+| Undetectable | 5 | Screen recording, remote desktop, VMs, text-to-speech, ChatGPT desktop overlay |
 
 The "Undetectable" category is probably the most interesting. These are things Canvas literally cannot see -- no browser events fire, no APIs exist to catch them. Remote desktop, screen recording, text-to-speech, and virtual machines all fall into this bucket.
 

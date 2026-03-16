@@ -7,6 +7,7 @@ import {
   BookmarkSimple,
   Browsers,
   ClipboardText,
+  ChatCircle,
   Code,
   Command,
   CopySimple,
@@ -96,12 +97,12 @@ const EDGE_CASES = [
     id: 5,
     icon: MagnifyingGlass,
     title: 'Spotlight Search',
-    description: 'Cmd+Space opens Spotlight.',
+    description: 'Cmd+Space opens Spotlight. On macOS Ventura+, this may NOT fire blur — Spotlight appears as a system overlay without stealing browser focus.',
     category: 'os',
     expectedEvents: ['blur'],
     triggerType: 'manual',
-    instructions: 'Press Cmd+Space to open Spotlight, then press Escape.',
-    canvasImpact: 'Quick blur event. Canvas may count this as "left quiz" if detection threshold is low.',
+    instructions: 'Press Cmd+Space to open Spotlight, then Escape. On newer macOS, no events may fire.',
+    canvasImpact: 'macOS version dependent. Older versions fire blur. Ventura+ often fires nothing — Spotlight is invisible to the browser.',
   },
   {
     id: 6,
@@ -525,6 +526,17 @@ const EDGE_CASES = [
     instructions: 'Drag text or an image from another window and drop it onto this page.',
     canvasImpact: 'Canvas can detect drag/drop events. Students may drag pre-written answers into essay fields.',
   },
+  {
+    id: 41,
+    icon: ChatCircle,
+    title: 'ChatGPT Desktop Overlay',
+    description: 'ChatGPT desktop app\'s Spotlight-like shortcut (Option+Space) opens a floating AI prompt over any window.',
+    category: 'undetectable',
+    expectedEvents: [],
+    triggerType: 'manual',
+    instructions: 'Press Option+Space to open ChatGPT overlay, type a question, get an answer, and dismiss.',
+    canvasImpact: 'UNDETECTABLE — The overlay is a native macOS window. No blur event on Ventura+. Students can query AI for answers mid-quiz with zero trace.',
+  },
 ];
 
 const CATEGORY_LABELS = {
@@ -548,7 +560,7 @@ export default function EdgeCasePanel() {
       <div className="edge-panel__header">
         <h2 className="edge-panel__title">Canvas LMS Edge Cases</h2>
         <p className="edge-panel__desc">
-          40 things that happen on your computer or browser that Canvas may (or may not) catch during a quiz.
+          41 things that happen on your computer or browser that Canvas may (or may not) catch during a quiz.
           Try them out and watch the event stream.
         </p>
       </div>
